@@ -11,6 +11,71 @@
 <body>
     <h1>Escopos no Javascript</h1>
 
+    <div>
+        <div><span>// Vari&aacute;veis declaradas como const e let n&atilde;o s&atilde;o acess&iacute;veis fora do bloco if</span></div>
+        <div><span>if</span> (<span>true</span>) {</div>
+        <div>&nbsp; &nbsp; <span>const</span> <span>saudacao</span> = <span>'Ol&aacute;'</span></div>
+        <div>}</div>
+        <br />
+        <div><span>// Vari&aacute;veis declaradas como var consegue ser acessadas de fora</span></div>
+        <div><span>if</span> (<span>true</span>) {</div>
+        <div>&nbsp; &nbsp; <span>var</span> <span>despedida</span> = <span>'Tchau'</span></div>
+        <div>}</div>
+        <br />
+        <div><span>console</span>.<span>log</span>(<span>despedida</span>)</div>
+        <div><span>console</span>.<span>log</span>(<span>saudacao</span>)</div>
+        <br />
+        <div><span>// Vari&aacute;veis declaradas como const ou let n&atilde;o s&atilde;o acess&iacute;veis fora do bloco</span></div>
+        <div>{</div>
+        <div>&nbsp; &nbsp; <span>let</span> <span>despedida</span> = <span>'Ol&aacute;'</span></div>
+        <div>}</div>
+        <br />
+        <div><span>// Vari&aacute;veis declaradas como var consegue ser acessadas de fora</span></div>
+        <div>{</div>
+        <div>&nbsp; &nbsp; <span>var</span> <span>saudacao</span> = <span>'Ol&aacute;'</span></div>
+        <div>}</div>
+        <br />
+        <div><span>console</span>.<span>log</span>(<span>saudacao</span>)</div>
+        <div><span>console</span>.<span>log</span>(<span>despedida</span>)</div>
+        <br />
+        <div><span>// As vari&aacute;veis declaradas dentro da fun&ccedil;&atilde;o, s&oacute; poder&atilde;o ser usadas dentro dela.</span></div>
+        <div><span>function</span> <span>falar</span>() {</div>
+        <div>&nbsp; &nbsp; <span>var</span> <span>mensagem</span> = <span>'Ol&aacute; Mundo!'</span></div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>mensagem</span>)</div>
+        <div>}</div>
+        <br />
+        <div><span>falar</span>()</div>
+        <div><span>console</span>.<span>log</span>(<span>mensagem</span>)</div>
+        <br /><br />
+        <div><span>// Assim como as vari&aacute;veis, as fun&ccedil;&otilde;es declarada dentro de outra fun&ccedil;&atilde;o, </span></div>
+        <div><span>// s&oacute; poder&atilde;o ser usadas pelo seu pai.</span></div>
+        <div><span>function</span> <span>falar</span>() {</div>
+        <div>&nbsp; &nbsp; <span>var</span> <span>mensagem</span> = <span>'Ol&aacute; Mundo!'</span></div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>mensagem</span>)</div>
+        <div>&nbsp; &nbsp; <span>function</span> <span>falarOutraCoisa</span>() {</div>
+        <br />
+        <div>&nbsp; &nbsp; }</div>
+        <div>&nbsp; &nbsp;</div>
+        <div>&nbsp; &nbsp; <span>falarOutraCoisa</span>()</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>falarOutraCoisa</span>)</div>
+        <div>}</div>
+        <br />
+        <div><span>falar</span>()</div>
+        <div><span>console</span>.<span>log</span>(<span>falarOutraCoisa</span>)</div>
+        <br />
+        <div><span>falar</span>()</div>
+        <div><span>console</span>.<span>log</span>(<span>falarOutraCoisa</span>)</div>
+        </div>
+
+    <!-- Variáveis declaradas dentro da tag script no HTML, 
+    podem ser lidas por qualquer outro script, desde que sejam declaradas primeiro. -->
+    script
+        let url = "https://www.youtube.com/watch?v=DO4k7Y3NQRg"
+    /script
+    script src="index.js" /script
+    
+    <!-- Variáveis declaradas dentro da tag script no HTML, 
+    podem ser lidas por qualquer outro script, desde que sejam declaradas primeiro. -->
     <script>
         let url = "https://www.youtube.com/watch?v=DO4k7Y3NQRg"
     </script>
