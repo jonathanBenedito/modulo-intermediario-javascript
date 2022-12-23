@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Functions</title>
+</head>
+<body>
+    <h1>Higher Order Functions</h1>
+
+    <div>
+        <div><span>// Higher Order Functions s&atilde;o fun&ccedil;&otilde;es que retornam ou recebem como par&acirc;metro outras fun&ccedil;&otilde;es.</span></div>
+        <br />
+        <div><span>// Utilizando fun&ccedil;&atilde;o como par&acirc;metro</span></div>
+        <br />
+        <div><span>const</span> <span>calcularAnoDeNascimento</span> = <span>function</span> (<span>idade</span>, <span>mesDeNascimento</span>, <span>imprimir</span>){</div>
+        <div>&nbsp; &nbsp; <span>const</span> <span>mesAtual</span> = <span>2</span></div>
+        <div>&nbsp; &nbsp; <span>let</span> <span>anoDeNascimento</span> = <span>2021</span> - <span>idade</span></div>
+        <div>&nbsp; &nbsp; <span>if</span> (<span>mesDeNascimento</span> &gt; <span>mesAtual</span>) <span>anoDeNascimento</span>--</div>
+        <div>&nbsp; &nbsp; <span>imprimir</span>(<span>anoDeNascimento</span>)</div>
+        <div>}</div>
+        <br />
+        <div><span>let</span> <span>imprimirAnoDeNascimento</span> = <span>anoDeNascimento</span> <span>=&gt;</span> {</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>'Seu ano de nascimento &eacute;: '</span> + <span>anoDeNascimento</span>)</div>
+        <div>}</div>
+        <br />
+        <div><span>calcularAnoDeNascimento</span>(<span>33</span>, <span>3</span>, <span>imprimirAnoDeNascimento</span>)</div>
+        <br />
+        <div><span>// Retornando uma outra fun&ccedil;&atilde;o</span></div>
+        <br />
+        <div><span>function</span> <span>multiplicar</span>(<span>multiplicador</span>) {</div>
+        <div>&nbsp; &nbsp; <span>return</span> <span>function</span>(<span>numero</span>) {</div>
+        <div>&nbsp; &nbsp; &nbsp; &nbsp; <span>return</span> <span>numero</span> * <span>multiplicador</span></div>
+        <div>&nbsp; &nbsp; }</div>
+        <div>}</div>
+        <br />
+        <div><span>let</span> <span>dobrar</span> = <span>multiplicar</span>(<span>2</span>)</div>
+        <div><span>let</span> <span>triplicar</span> = <span>multiplicar</span>(<span>3</span>)</div>
+        <div><span>let</span> <span>quadruplicar</span> = <span>multiplicar</span>(<span>4</span>)</div>
+        <br />
+        <div><span>console</span>.<span>log</span>(<span>dobrar</span>(<span>2</span>))</div>
+        <div><span>console</span>.<span>log</span>(<span>triplicar</span>(<span>3</span>))</div>
+        <div><span>console</span>.<span>log</span>(<span>quadruplicar</span>(<span>4</span>))</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
