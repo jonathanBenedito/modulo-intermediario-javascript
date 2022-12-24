@@ -24,6 +24,15 @@
     <li>
         <a href="#aula-06---arrays">Aula 06 - Arrays</a>
     </li>
+    <li>
+        <a href="#aula-07---arrays-multidimensionais">Aula 07 - Arrays Multidimensionais</a>
+    </li>
+    <li>
+        <a href="#aula-08---trabalhando-com-arrays">Aula 08 - Trabalhando com Arrays</a>
+    </li>
+    <li>
+        <a href="#aula-09---slice-e-splice">Aula 09 - Slice e Splice</a>
+    </li>
 </ul>
 
 ## Aula 01 - Escopos do Javascript
@@ -203,3 +212,99 @@ let descricaoFilme = ['Vingadores', 4.6]
 console.log(filmes[1])
 console.log(descricaoFilme)
 ```
+
+## Aula 07 - Arrays Multidimensionais
+
+```jsx
+// Array multidimensionals são arrays dentro de arrays.
+
+let filmes = [ 
+    ['Vingadores', 4.5, true],
+    ['Mulher Maravilha', 4.6, false]
+] 
+
+// Para acessar o conteúdo do último filho do array, basta pegar a index do pai
+// e pegar a index do filho. Assim como a variável abaixo:
+
+console.table(filmes[0][1])
+```
+
+## Aula 08 - Trabalhando com Arrays
+
+```jsx
+// Podemos acessar todos os valores em uma array, usando o loop for para 
+// percorrer seus indices
+
+let frutas = ['banana', 'maçã', 'laranja', 'pêra']
+let frutasTamanho = frutas.length
+
+for (let i = 0; i < frutasTamanho; i++) {
+    console.log('Fruta: ' + frutas[i])
+}
+
+// Usando forEach, podemos pegar por item, indice ou array
+
+frutas.forEach((item, indice, array) => {
+    console.log("Item: " + item)
+})
+```
+
+### Adicionando elementos
+
+```jsx
+// Adicionando um elemento num array e colocando na última posição.
+
+frutas.push('manga')
+
+// Adicionando um elemento num array e colocando na primeira posição.
+
+frutas.unshift('morango')
+```
+
+### Removendo elementos
+
+```jsx
+// Removendo um item no final do array
+
+frutas.pop()
+
+// Removendo um item no inicio do array
+
+frutas.shift()
+```
+
+## Aula 09 - Slice e Splice
+
+`Slice`
+
+```jsx
+// Slice serve para extrair items, informando sua posição inicial até a 
+// posição final preservando sua array.
+
+let frutas = ['Banana', 'Maçã', 'Laranja', 'Uva']
+
+// Neste exemplo, nós extraíremos os items pelo elemento 'Maçã' até a 'Uva'
+// Tenha em mente não ele pega o item da última posição
+
+// Extraíndo 'Maçã' e 'Laranja'
+let frutasExtraidas = frutas.slice(1, 3)
+```
+
+`Splice`
+
+```jsx
+// Splice serve para remover items, informando sua posição inicial e a
+// quantidade que a função percorerrá a partir do inicio
+
+// Removendo 'Maçã' e 'Laranja'
+let frutasRemovidas = frutas.splice(1, 2)
+```
+
+```jsx
+// Podemos usar o splice para remover e substituir por elementos novos no
+// lugar
+
+// Substituindo 'Maçã' e 'Laranja' por 'Pera' e 'Goiaba'
+let removeEadicionaFrutas = frutas.splice(1, 2, 'Pera', 'Goiaba')
+```
+

@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trabalhando com Arrays</title>
+</head>
+<body>
+    <h1>Trabalhando com Arrays</h1>
+
+    <div>
+        <div><span>// Podemos acessar todos os valores em uma array, usando o loop for para </span></div>
+        <div><span>// percorrer seus indices</span></div>
+        <br />
+        <div><span>let</span> <span>frutas</span> = [<span>'banana'</span>, <span>'ma&ccedil;&atilde;'</span>, <span>'laranja'</span>, <span>'p&ecirc;ra'</span>]</div>
+        <div><span>let</span> <span>frutasTamanho</span> = <span>frutas</span>.<span>length</span></div>
+        <br />
+        <div><span>for</span> (<span>let</span> <span>i</span> = <span>0</span>; <span>i</span> &lt; <span>frutasTamanho</span>; <span>i</span>++) {</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>'Fruta: '</span> + <span>frutas</span>[<span>i</span>])</div>
+        <div>}</div>
+        <br />
+        <div><span>// Usando forEach, podemos pegar por item, indice ou array</span></div>
+        <br />
+        <div><span>frutas</span>.<span>forEach</span>((<span>item</span>, <span>indice</span>, <span>array</span>) <span>=&gt;</span> {</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>"Item: "</span> + <span>item</span>)</div>
+        <div>})</div>
+        <br />
+        <div><span>// Adicionando um elemento num array e colocando na &uacute;ltima posi&ccedil;&atilde;o</span></div>
+        <br />
+        <div><span>frutas</span>.<span>push</span>(<span>'manga'</span>)</div>
+        <br />
+        <div><span>// Adicionando um elemento num array e colocando na primeira posi&ccedil;&atilde;o</span></div>
+        <br />
+        <div><span>frutas</span>.<span>unshift</span>(<span>'morango'</span>)</div>
+        <br />
+        <div><span>// Removendo um item no final do array</span></div>
+        <br />
+        <div><span>frutas</span>.<span>pop</span>()</div>
+        <br />
+        <div><span>// Removendo um item no inicio do array</span></div>
+        <br />
+        <div><span>frutas</span>.<span>shift</span>()</div>
+        <br />
+        <div><span>// Usando forEach, podemos pegar por item, indice ou array</span></div>
+        <br />
+        <div><span>frutas</span>.<span>forEach</span>((<span>item</span>, <span>indice</span>, <span>array</span>) <span>=&gt;</span> {</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>"Alterado: "</span> + <span>item</span>)</div>
+        <div>})</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>

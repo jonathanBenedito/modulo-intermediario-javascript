@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Slice & Splice</title>
+</head>
+<body>
+    <h1>Slice & Splice</h1>
+
+    <div>
+        <div><span>// Slice serve para extrair items, informando sua posi&ccedil;&atilde;o inicial at&eacute; a posi&ccedil;&atilde;o final</span></div>
+        <div><span>// preservando sua array.</span></div>
+        <br />
+        <div><span>let</span> <span>frutas</span> = [<span>'Banana'</span>, <span>'Ma&ccedil;&atilde;'</span>, <span>'Laranja'</span>, <span>'Uva'</span>]</div>
+        <br />
+        <div><span>// Neste exemplo, n&oacute;s come&ccedil;a extrair items pelo elemento 'Ma&ccedil;&atilde;' at&eacute; a 'Uva'</span></div>
+        <div><span>// Tenha em mente n&atilde;o ele pega o item da &uacute;ltima posi&ccedil;&atilde;o</span></div>
+        <br />
+        <div><span>// Extra&iacute;ndo 'Ma&ccedil;&atilde;' e 'Laranja'</span></div>
+        <div><span>let</span> <span>frutasExtraidas</span> = <span>frutas</span>.<span>slice</span>(<span>1</span>, <span>3</span>)</div>
+        <br />
+        <div><span>console</span>.<span>log</span>(<span>frutasExtraidas</span>)</div>
+        <br />
+        <div><span>// Splice serve para remover items, informando sua posi&ccedil;&atilde;o inicial e a</span></div>
+        <div><span>// quantidade que a fun&ccedil;&atilde;o percorerr&aacute; a partir do inicio</span></div>
+        <br />
+        <div><span>// Removendo 'Ma&ccedil;&atilde;' e 'Laranja'</span></div>
+        <div><span>let</span> <span>frutasRemovidas</span> = <span>frutas</span>.<span>splice</span>(<span>1</span>, <span>2</span>)</div>
+        <br />
+        <div><span>console</span>.<span>log</span>(<span>frutas</span>)</div>
+        <br />
+        <div><span>// Podemos usar o splice para remover e substituir por elementos novos no</span></div>
+        <div><span>// lugar</span></div>
+        <br />
+        <div><span>// Substituindo 'Ma&ccedil;&atilde;' e 'Laranja' por 'Pera' e 'Goiaba'</span></div>
+        <div><span>let</span> <span>removeEadicionaFrutas</span> = <span>frutas</span>.<span>splice</span>(<span>1</span>, <span>2</span>, <span>'Pera'</span>, <span>'Goiaba'</span>)</div>
+        <br />
+        <div><span>console</span>.<span>log</span>(<span>frutas</span>)</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
