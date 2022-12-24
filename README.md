@@ -33,6 +33,12 @@
     <li>
         <a href="#aula-09---slice-e-splice">Aula 09 - Slice e Splice</a>
     </li>
+    <li>
+        <a href="#aula-10---objetos">Aula 10 - Objetos</a>
+    </li>
+    <li>
+        <a href="#aula-11---métodos">Aula 11 - Métodos</a>
+    </li>
 </ul>
 
 ## Aula 01 - Escopos do Javascript
@@ -308,3 +314,37 @@ let frutasRemovidas = frutas.splice(1, 2)
 let removeEadicionaFrutas = frutas.splice(1, 2, 'Pera', 'Goiaba')
 ```
 
+## Aula 10 - Objetos
+
+```jsx
+// Objetos são entidades com propriedades, como se fossem uma array 
+// com valores identificado por nomes.
+
+let tenis = {
+    // chave: valor
+    cor: 'branco',
+    tamanho: 42,
+    emEstoque: true
+}
+
+// É possível adicionar propriedades novas, após ser declarada.
+// Basta nomear uma propriedade depois do ponto e atribuir um valor,
+// como no exemplo abaixo: tenis.valor = 200
+
+tenis.valor = 200
+```
+
+## Aula 11 - Métodos
+
+```jsx
+// Metodos são funções que funcionam dentro de objetos
+
+let usuario = { 
+    nome: 'Roberto',
+    excluir: function () {
+        console.log('O usuario, ' + this.nome + ' foi excluído!')
+    }
+ }
+
+ usuario.excluir()
+```
