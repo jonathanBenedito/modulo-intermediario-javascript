@@ -39,6 +39,9 @@
     <li>
         <a href="#aula-11---métodos">Aula 11 - Métodos</a>
     </li>
+    <li>
+        <a href="#aula-12---strict-e-this">Aula 12 - Strict e This</a>
+    </li>
 </ul>
 
 ## Aula 01 - Escopos do Javascript
@@ -347,4 +350,40 @@ let usuario = {
  }
 
  usuario.excluir()
+```
+
+## Aula 12 - Strict e This
+- `use strict`
+```jsx
+// Strict faz com que o javascript restrinja o acesso de variaveis declaradas fora
+// dos blocos, forçando a obedecer os escopos das declarações.
+'use strict'
+
+this.name = 'Ricardo'
+
+// Ao tentar ler a variável nome, emitirá um erro, pois esta variável se encontra
+// fora do escopo, por conta da condição imposta pelo 'use strict'
+
+function saudar() {
+    console.log("this no contexto da função", this)
+    console.log("Olá, " + this.name)
+}
+
+saudar()
+```
+
+- `this`
+```jsx
+// this serve para apontar alguma variável ou função que esteja dentro
+// do escopo de onde 'this' está sendo usado
+
+// this é utilizado para referenciar o nome que está dentro
+// da função
+
+let usuario = { 
+    nome: 'Roberto',
+    excluir: function () {
+        console.log('O usuario, ' + this.nome + ' foi excluído!')
+    }
+ }
 ```

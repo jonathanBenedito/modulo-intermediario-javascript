@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This</title>
+</head>
+<body>
+    <h1>This</h1>
+    
+    <div>
+        <div><span>// Strict faz com que o javascript restrinja o acesso de variaveis declaradas fora</span></div>
+        <div><span>// dos blocos, for&ccedil;ando a obedecer os escopos das declara&ccedil;&otilde;es.</span></div>
+        <div><span>'use strict'</span></div>
+        <br />
+        <div><span>// this serve para apontar alguma vari&aacute;vel ou fun&ccedil;&atilde;o que esteja dentro</span></div>
+        <div><span>// do escopo de onde 'this' est&aacute; sendo usado</span></div>
+        <br />
+        <div><span>this</span>.<span>name</span> = <span>'Ricardo'</span></div>
+        <br />
+        <div><span>// Ao tentar ler a vari&aacute;vel nome, emitir&aacute; um erro, pois esta vari&aacute;vel se encontra</span></div>
+        <div><span>// fora do escopo, por conta da condi&ccedil;&atilde;o imposta pelo 'use strict'</span></div>
+        <br />
+        <div><span>function</span> <span>saudar</span>() {</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>"this no contexto da fun&ccedil;&atilde;o"</span>, <span>this</span>)</div>
+        <div>&nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>"Ol&aacute;, "</span> + <span>this</span>.<span>name</span>)</div>
+        <div>}</div>
+        <br />
+        <div><span>saudar</span>()</div>
+        <br />
+        <div><span>// this &eacute; utilizado para referenciar o nome que est&aacute; dentro</span></div>
+        <div><span>// da fun&ccedil;&atilde;o</span></div>
+        <br />
+        <div><span>let</span> <span>usuario</span> = {</div>
+        <div>&nbsp; &nbsp; <span>nome</span><span>:</span> <span>'Roberto'</span>,</div>
+        <div>&nbsp; &nbsp; <span>excluir</span><span>:</span> <span>function</span> () {</div>
+        <div>&nbsp; &nbsp; &nbsp; &nbsp; <span>console</span>.<span>log</span>(<span>'O usuario, '</span> + <span>this</span>.<span>nome</span> + <span>' foi exclu&iacute;do!'</span>)</div>
+        <div>&nbsp; &nbsp; }</div>
+        <div>&nbsp;}</div>
+        <br />
+        <div>&nbsp;<span>usuario</span>.<span>excluir</span>()</div>
+        <br />
+        <div>&nbsp;<span>let</span> <span>comida</span> = {</div>
+        <div>&nbsp; &nbsp; <span>nome</span><span>:</span> <span>'Br&oacute;colis'</span>,</div>
+        <div>&nbsp; &nbsp; <span>temperatura</span><span>:</span> <span>0</span></div>
+        <div>&nbsp;}</div>
+        <br />
+        <div>&nbsp;<span>comida</span>.<span>cozinhar</span> = <span>function</span>(<span>comidaParaCozinhar</span>, <span>temperaturaDeCozimento</span>) {</div>
+        <div>&nbsp; &nbsp; <span>this</span>.<span>temperatura</span> = <span>temperaturaDeCozimento</span>;</div>
+        <div>&nbsp;}</div>
+        <br />
+        <div>&nbsp;<span>console</span>.<span>log</span>(<span>comida</span>)</div>
+        <br />
+        <div>&nbsp;<span>comida</span>.<span>cozinhar</span>(<span>comida</span>, <span>100</span>)</div>
+        <br />
+        <div>&nbsp;<span>console</span>.<span>log</span>(<span>comida</span>)</div>
+    </div>
+
+    <script src="index.js"></script>
+</body>
+</html>
