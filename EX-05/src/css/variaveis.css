@@ -1,0 +1,8 @@
+:root {
+    --cor-texto-vermelho: rgba(197, 0, 0, 1);
+    --cor-texto-amarelo: rgba(217, 221, 16, 1);
+    --cor-texto-marrom: rgba(166, 58, 23, 1);
+    --cor-texto-azul: rgba(16, 172, 221, 1);
+
+    --cor-fundo-cartao: white;
+}

@@ -1,0 +1,108 @@
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+
+.main {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.seta {
+    position: absolute;
+    cursor: pointer;
+    z-index: 1;
+}
+
+.seta.desativada {
+    opacity: 0.5;
+    cursor: default;
+}
+
+.seta-esquerda {
+    left: 77px;
+}
+
+.seta-direita {
+    right: 77px;
+}
+
+.slide {
+    padding: 0 180px;
+    width: 100vw;
+    height: 100%;
+    display: flex;
+    position: absolute;
+    align-items: center;
+    opacity: 1;
+    transition: 0.5s ease-in-out;
+}
+
+.slide.esconder {
+    opacity: 0;
+}
+
+.slide-1 {
+    background: url('../imagens/imagem-fundo-1.png') center center no-repeat;
+    background-size: cover;
+}
+
+.slide-2 {
+    background: url('../imagens/imagem-fundo-2.png') center center no-repeat;
+    background-size: cover;
+}
+
+.slide-3 {
+    background: url('../imagens/imagem-fundo-3.png') center center no-repeat;
+    background-size: cover;
+}
+
+.slide-4 {
+    background: url('../imagens/imagem-fundo-4.png') center center no-repeat;
+    background-size: cover;
+}
+
+.slide .cartao {
+    max-width: 620px;
+    background-color: var(--cor-fundo-cartao);
+    border-radius: 1rem;
+    padding: 65px 60px;
+}
+
+.slide .cartao h1 {
+    font-weight: 400;
+    font-size: 5rem;
+    margin-bottom: 80px;
+}
+
+.slide .cartao p {
+    font-size: 2.5rem;
+    font-weight: 300;
+    margin-bottom: 50px;
+}
+
+.slide .cartao a {
+    font-size: 3rem;
+    font-weight: 700;
+}
+
+.slide .cartao a.texto-vermelho {
+    color: var(--cor-texto-vermelho);
+}
+
+.slide .cartao a.texto-amarelo {
+    color: var(--cor-texto-amarelo);
+}
+
+.slide .cartao a.texto-marrom {
+    color: var(--cor-texto-marrom);
+}
+
+.slide .cartao a.texto-azul {
+    color: var(--cor-texto-azul);
+}

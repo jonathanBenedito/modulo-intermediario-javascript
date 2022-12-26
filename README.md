@@ -56,6 +56,24 @@
     </li>
 </ul>
 
+<ul>
+    <li>
+        <a href="#exercício-01">Exercício 01
+    </li>
+    <li>
+        <a href="#exercício-02">Exercício 02
+    </li>
+    <li>
+        <a href="#exercício-03">Exercício 03
+    </li>
+    <li>
+        <a href="#exercício-04">Exercício 04
+    </li>
+    <li>
+        <a href="#exercício-05">Exercício 05
+    </li>
+</ul>
+
 ## Aula 01 - Escopos do Javascript
 
 ```jsx
@@ -489,3 +507,27 @@ selectDeEstado.addEventListener('change', function (event) {
     console.log(event.target.value)
 })
 ```
+
+## Exercício 01
+
+<img src="EX-01/Proposta - Exercicio 1.jpg" height="500px" />
+
+## Exercício 02
+
+<img src="EX-02/Proposta - Exercicio 2.jpg" height="500px" />
+
+## Exercício 03
+
+<img src="EX-03/Proposta - Exercicio 3.jpg" height="500px" />
+
+## Exercício 04
+
+<img src="EX-04/Proposta - Exercicio 4.jpg" height="500px" />
+
+## Exercício 05
+
+<img src="EX-05/Proposta - Exercicio 5.jpg" height="500px" />
+
+## Exercício 06
+
+<img src="EX-06/Proposta - Exercicio 6.jpg" height="500px" />
