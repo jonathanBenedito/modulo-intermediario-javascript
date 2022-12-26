@@ -42,6 +42,18 @@
     <li>
         <a href="#aula-12---strict-e-this">Aula 12 - Strict e This</a>
     </li>
+    <li>
+        <a href="#aula-13---selecionando-elementos-do-dom">Aula 13 - Selecionando Elementos do DOM</a>
+    </li>
+    <li>
+        <a href="#aula-14---manipulando-html">Aula 14 - Manipulando HTML</a>
+    </li>
+    <li>
+        <a href="#aula-15---manipulando-atributos-e-estilos">Aula 15 - Manipulando Atributos e Estilos</a>
+    </li>
+    <li>
+        <a href="#aula-16---adicionando-eventos">Aula 16 - Adicionando Eventos</a>
+    </li>
 </ul>
 
 ## Aula 01 - Escopos do Javascript
@@ -386,4 +398,94 @@ let usuario = {
         console.log('O usuario, ' + this.nome + ' foi excluído!')
     }
  }
+```
+
+## Aula 13 - Selecionando Elementos do DOM
+
+```jsx
+// Selecionar elemento pelo id
+
+let p = document.getElementById('paragrafo1')
+
+// Selecionar elementos por classe
+
+let inputPorClasse = document.getElementsByClassName('tag-de-input')
+
+// Selecionar elementos por tag
+
+let inputPorTag = document.getElementsByTagName('input')
+
+// Selecionar elementos por query. Podendo ser id, classe, atributos ou tag
+
+let inputPorName = document.querySelectorAll("input[name='email']")
+```
+
+## Aula 14 - Manipulando HTML
+
+```jsx
+// É uma função que adiciona comentários após clicar no botão.
+// Ela pega o texto dentro do input pelo seu nome 'novo-comentario' 
+// e adiciona um novo parágrafo com aquele texto dentro da div pelo 
+// seu id 'novos-comentarios'
+
+function adicionarComentario() {
+    let inputComentario = document.getElementsByName('novo-comentario')
+    
+    let textoDigitado = inputComentario[0].value;
+
+    let novosComentarios = document.getElementById("novos-comentarios")
+
+    novosComentarios.innerHTML += `<p>Novo comentário: ${textoDigitado} </p>`
+}
+```
+
+## Aula 15 - Manipulando Atributos e Estilos
+
+```jsx
+// Manipulando atributos
+
+function marcarRadio(genero) {
+    let radioMasculino = document.getElementById('genero-masculino')
+
+    let radioFeminino = document.getElementById('genero-feminino')
+
+    if (genero === 'M') {
+        radioMasculino.checked = true
+    } else if (genero === 'F') {
+        radioFeminino.checked = true
+    }
+}
+```
+
+```jsx
+// Manipulando estilos por propriedades diretamente
+
+function alterarCorDeFundoPrimeiroPost() {
+    let posts = document.getElementsByClassName('post')
+
+    console.log(posts)
+
+    let primeiroPost = posts[0]
+    primeiroPost.style.backgroundColor = 'red'
+}
+
+// Manipulando estilos por adição de classes
+
+function aumentarFonteDoSegundoPost() {
+    let textPosts = document.getElementsByClassName('texto-post')
+
+    textPosts[1].classList.add('fonte-grande')
+}
+```
+
+## Aula 16 - Adicionando Eventos
+
+```jsx
+// Adicionando um evento no select usando addEventListener
+
+let selectDeEstado = document.querySelector("select[name='estado']")
+
+selectDeEstado.addEventListener('change', function (event) {
+    console.log(event.target.value)
+})
 ```
