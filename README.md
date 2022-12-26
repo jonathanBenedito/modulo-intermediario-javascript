@@ -72,6 +72,9 @@
     <li>
         <a href="#exercício-05">Exercício 05
     </li>
+    <li>
+        <a href="#exercício-06">Exercício 06
+    </li>
 </ul>
 
 ## Aula 01 - Escopos do Javascript
