@@ -1,4 +1,4 @@
-# Índice das Aulas Javascript Básico
+# Índice das Aulas Javascript Intermediário
 📄 Link de acesso aos <a href="https://cord-delivery-7eb.notion.site/Javascript-Intermedi-rio-fc28db16ddf744ef8b7ec4f72138c7dd">resumos</a>. 
 
 🖼 Link de acesso a <a href="https://jonathanbenedito.github.io/modulo-intermediario-javascript/">página</a>.
